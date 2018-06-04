@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.widget.Toast
+import com.android.volley.NetworkResponse
+import com.android.volley.Request
+import com.android.volley.VolleyError
+import com.neopixl.spitfire.listener.RequestListener
+import com.neopixl.spitfire.request.BaseRequest
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -30,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    fun tryToLogin() {
+    private fun tryToLogin() {
         val email = emailEditText.text
         val password = passwordEditText.text
 
@@ -48,19 +53,10 @@ class LoginActivity : AppCompatActivity() {
         } else {
             // Display error
 
-            val builder = AlertDialog.Builder(this@LoginActivity)
-            builder.setMessage("Message d'information !")
-                    .setTitle("Alerte")
-                    .setCancelable(true)
-                    .setNegativeButton("NON", { view, which ->
-
-                    })
-                    .setPositiveButton("OUI", { view, which ->
-
-                    })
-
-            val dialog = builder.create()
-            dialog.show()
+            Toast.makeText(this,
+                    "Your can't log in",
+                    Toast.LENGTH_SHORT)
+                    .show()
         }
     }
 }
