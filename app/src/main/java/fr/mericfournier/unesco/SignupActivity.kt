@@ -9,7 +9,7 @@ import android.widget.Toast
 import fr.mericfournier.unesco.model.User
 import fr.mericfournier.unesco.profile.UserJSON
 import fr.mericfournier.unesco.profile.UserService
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {
@@ -44,26 +44,26 @@ class SignupActivity : AppCompatActivity() {
             // Display success
 
             // Appel au WS
-            UserService.getUser(object: UserService.UserServiceListener{
-                override fun onReceiveResult(users: List<UserJSON>) {
+            //UserService.getUser(object: UserService.UserServiceListener{
+                //override fun onReceiveResult(users: List<UserJSON>) {
 
-                    val UserList = arrayListOf<User>()
+                    //val UserList = arrayListOf<User>()
 
                     //UserList.add(User("firstname","lastname", "email", "password"))
 
                     //itemAdapter.clear() // nettoyage de la liste avant de la remplir
 
                     // Remplissage de l'adapter à partir des objets UserJSON, retransformé en Contact -> ContactItem
-                    for(UserJSON in users) {
-                        UserList.add(User("firstname", "lastname", "email", "password"))
-                    }
-                }
+                    //for(UserJSON in users) {
+                        //UserList.add(User("firstname", "lastname", "email", "password"))
+                    //}
+                //}
 
-                override fun onFailed() {
+                //override fun onFailed() {
 
-                }
+                //}
 
-            })
+            //})
 
             Toast.makeText(this,
                     "Your account has been created",
@@ -92,13 +92,9 @@ class SignupActivity : AppCompatActivity() {
 
                 if (data != null) {
                     val firstname = data.extras.getString("firstname");
-                    firstnameTextView.setText(firstname)
+                    firstnameProfileTextView.setText(firstname)
                     val lastname = data.extras.getString("lastname");
-                    lastnameTextView.setText(lastname)
-                    val email = data.extras.getString("email");
-                    emailTextView.setText(email)
-                    val password = data.extras.getString("password");
-                    passwordTextView.setText(password)
+                    lastnameProfileTextView.setText(lastname)
                 }
             }
         }
