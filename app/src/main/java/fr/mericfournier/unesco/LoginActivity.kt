@@ -46,14 +46,12 @@ class LoginActivity : AppCompatActivity() {
                     "Success in log in",
                     Toast.LENGTH_SHORT)
                     .show()
-<<<<<<< HEAD
-            val intent = Intent(this, homeActivity::class.java)
-            startActivityForResult(intent, 99)
-=======
 
-            val intent = Intent(this, MainActivity::class.java)
+
+
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
->>>>>>> ac583a2c17dd8e98c2d679278862bc103e694f9d
+
 
         } else {
             // Display error

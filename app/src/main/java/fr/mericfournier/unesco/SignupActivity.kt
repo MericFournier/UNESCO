@@ -70,7 +70,7 @@ class SignupActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT)
                     .show()
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivityForResult(intent,43)
 
         } else {

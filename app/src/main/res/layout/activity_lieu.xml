@@ -37,7 +37,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView11"
+        android:layout_below="@+id/critère__item1__text"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="620dp"
         android:background="@drawable/favoris"
@@ -58,7 +58,7 @@
             android:layout_width="18dp"
             android:layout_height="26dp"
             android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/textView11"
+            android:layout_alignStart="@+id/emailEditText"
             android:layout_marginTop="38dp"
             android:background="@drawable/arrow__back__item" />
 
